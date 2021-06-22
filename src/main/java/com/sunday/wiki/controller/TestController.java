@@ -1,6 +1,7 @@
 package com.sunday.wiki.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,6 +18,11 @@ public class TestController {
     @RequestMapping("/hello")
     public String hello () {
         return "hello world";
+    }
+
+    @RequestMapping(value = "/hello/post", method = RequestMethod.POST)
+    public String hello (String name) {
+        return "hello world" + name;
     }
 
 }
