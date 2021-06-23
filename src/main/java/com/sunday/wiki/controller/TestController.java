@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @RequestMapping("/hello")
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello () {
         return "hello world";
     }
 
     @RequestMapping(value = "/hello/post", method = RequestMethod.POST)
     public String hello (String name) {
-        return "hello world" + name;
+        return "hello davefeng!" + name;
     }
 
 }
