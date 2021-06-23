@@ -17,12 +17,12 @@ public class TestController {
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello () {
-        return "hello world";
+        return "hello world!";
     }
 
     @RequestMapping(value = "/hello/post", method = RequestMethod.POST)
     public String hello (String name) {
-        return "hello davefeng!" + name;
+        return "hello davefeng! " + name;
     }
 
 }
