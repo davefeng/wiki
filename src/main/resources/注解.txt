@@ -1,0 +1,8 @@
+@NonNull可以标注在方法、字段、参数之上，表示对应的值不可以为空
+@Nullable注解可以标注在方法、字段、参数之上，表示对应的值可以为空
+
+@Configuration注释的类 类似于于一个 xml 配置文件的存在
+@Bean 类似以前xml里的<bean></bean>
+
+@AliasFor(annotation=MyAnnotation.class)  //默认指明继承的父注解(MyAnnotation即为父注解)的中的属性名称，则默认继承父注解中同名的属性名
+String value() default "";
